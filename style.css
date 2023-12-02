@@ -1,0 +1,37 @@
+body {
+    background-color:aqua;
+    background-size: contain;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+h1 { display: flex;
+     justify-content: center; 
+}
+
+.centradoUno {display: flex;
+              justify-content: center;
+              align-items: center;
+}
+
+.centradoDos {display: flex;
+              justify-content: space-around;
+              align-items: center;
+              margin: auto;
+              padding: 0%;   
+}
+
+#formulario { display: none;
+
+}
+/* 
+  // centrado */
+/* 
+display: flex;
+justify-content: center;
+align-items: center;
+
+display: flex;
+justify-content: flex-start;
+align-items: center;
+ */

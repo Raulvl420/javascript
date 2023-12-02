@@ -1,0 +1,7 @@
+[
+    {"tipo":"Camara IP", "modelo":"CY-IPC-4K-FEYE","precio":1600},
+    {"tipo":"Camara IP", "modelo":"CY-IPC-4K-DZS-A","precio":2500},
+    {"tipo":"Camara IP", "modelo":"CY-IPC-4M-BWS","precio":3600},
+    {"tipo":"Camara IP", "modelo":"CY-IPC-4M-DZS","precio":1000},
+    {"tipo":"Camara IP", "modelo":"CY-IPC-4M-DWS","precio":900}
+]

@@ -1,0 +1,7 @@
+[
+    {"tipo":"Switch", "modelo":"CY-S1016-200","precio":5000},
+    {"tipo":"Switch", "modelo":"CY-S2004-240","precio":3500},
+    {"tipo":"Switch", "modelo":"CY-S824-10G","precio":2800},
+    {"tipo":"Switch", "modelo":"CY-S2024-420-FL","precio":6500},
+    {"tipo":"Switch", "modelo":"PFS3006-4GT-60-V2","precio":9500}
+]
