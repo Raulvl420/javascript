@@ -9,16 +9,26 @@ h1 { display: flex;
      justify-content: center; 
 }
 
-.centradoUno {display: flex;
+.centradoUno {display:flex;
               justify-content: center;
               align-items: center;
+              margin: 5px;
+              padding: 5px;
+              font-size: 10px;
+
+}
+
+.centradoUno div {display:flex;
+                  justify-content:center;
+                  align-items: center;
 }
 
 .centradoDos {display: flex;
-              justify-content: space-around;
               align-items: center;
+              justify-content: space-around;
               margin: auto;
-              padding: 0%;   
+              padding: 2px;
+
 }
 
 #formulario { display: none;

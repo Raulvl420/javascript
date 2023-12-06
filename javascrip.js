@@ -3,6 +3,32 @@ let opcionUno = "Camaras de Seguridad"
 let opcionDos = "Redes"
 let opcionTres = "Control de Acceso"
 let opcionCuatro = "Servicio tecnico"
+let nombreUsuario;
+// Indicanos tu nombre
+
+Swal.fire({
+  title: "Bienvenido",
+  text: "Cual es su nombre?",
+  icon: "question",
+  input: "text",
+  showCancelButton: true,
+  confirmButtonText: "Guardar",
+  cancelButtonText: "Cancelar"  
+    }).then((result) => {
+      if (result.isConfirmed) {
+          nombreUsuario = result.value;
+          Swal.fire({
+              title: "¡Hola, " + nombreUsuario,
+              icon: "success"
+          });
+      } else {
+          Swal.fire({
+              title: "Acción cancelada",
+              text: "No ingresaste un nombre",
+              icon: "info"
+          });
+      }
+    })
 
 let carrito = [];
 const arrayA = []
@@ -53,16 +79,26 @@ let botonAgregar = document.createElement("button");
 botonAgregar.innerHTML = "Agregar a Carrito";
 botonAgregar.addEventListener("click", function() {
 agregarAlCarrito (producto);
-                                                                                                // Tengo que console log
-console.log("Agregado al carrito:", producto);
+Toastify({
+  text: "Producto Agregado",
+  className: "info",
+  style: {
+    background: "linear-gradient(to right, #00b09b, #96c93d)",
+  }
+}).showToast();
 });
 
 let botonEliminar = document.createElement("button");
 botonEliminar.innerHTML = "Eliminar del carrito";
 botonEliminar.addEventListener("click", function() {
     eliminarDelCarrito (producto);
-                                                                                                // Tengo el console log
-console.log("Eliminado del carrito:", producto);
+    Toastify({
+      text: "Producto Eliminado",
+      className: "info",
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      }
+    }).showToast();
 });
 
 document.body.appendChild(contenedor);
@@ -101,7 +137,11 @@ function mostrarCarrito () {
     let botonPago = document.createElement("button");
     botonPago.innerHTML = "Pagar";
     botonPago.addEventListener("click", function() {
-      alert ("pagaste")
+      Swal.fire({
+        title: "Se Genero pedido " + nombreUsuario,
+        text: "Siga las indicaciones enviadas por mail",
+        icon: "success"
+      });
 });
     totalDiv.appendChild(botonPago)
 }
@@ -181,8 +221,13 @@ document.getElementById("control").addEventListener("click", function(event) {
 document.getElementById("soporte").addEventListener("click", function(event) {
   limpiarContenido()
   document.getElementById ("formulario").style.display = "block";
+  
   document.getElementById("enviar").addEventListener("click",function(event){
     storage()
+    Swal.fire({
+      text: "Informacion enviada correctamente " + nombreUsuario,
+      icon: "success"
+    });
     }) 
 });
 
